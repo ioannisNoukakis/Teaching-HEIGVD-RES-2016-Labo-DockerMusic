@@ -14,7 +14,6 @@ var dateFormat = require('dateformat');
  * Server use TCP connection  
  */
 var net = require('net');
-var HOST = '172.17.0.2';
 var PORT = 2205;
 
 // create server tcp and return the list of instrument 
@@ -45,9 +44,9 @@ var tcpServer = net.createServer(function(socket) {
   // kill socket
   socket.end();
    
-}).listen(PORT,HOST);
+}).listen(PORT);
 
-console.log('[INFO] tcpServer started listening on :' +HOST+':'+PORT);
+console.log('[INFO] tcpServer started listening on :'+PORT);
 
 /* end server */
 
@@ -91,7 +90,7 @@ s.on('message', function(msg, source) {
 		}	
 
 		musicienTable.forEach(function(inst, clé) {
-			if((date - inst.date) > 10000)
+			if((date - inst.date) > 8000)
 			{
 				console.log("[INFO] removing // uuid: " + inst.uuid + "sound: " + inst.sound);
 				musicienTable.delete(inst.uuid);

@@ -40,8 +40,8 @@ function Instrument(instrument) {
 
 }
 
-if(process.argv.length != 2)
-	throw err;
+if(process.argv.length != 3)
+	throw new Error('you need to specify the name of the instrument to play');
 else
 	var sound = process.argv[2];
 
