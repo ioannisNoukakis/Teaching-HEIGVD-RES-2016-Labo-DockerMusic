@@ -1,5 +1,9 @@
 # Teaching-HEIGVD-RES-2016-Labo-DockerMusic
 
+## Authors
+
+Ioannis Noukakis & Michela Zucca
+
 ## Admin
 
 * You can work in teams of two students.
