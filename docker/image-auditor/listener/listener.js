@@ -77,7 +77,7 @@ s.on('message', function(msg, source) {
 			date: date,
 			activeSince: date
 		};
-		var ancienInstrument = musicienTable.get(instrument.uuid)
+		var ancienInstrument = musicienTable.get(instrument.uuid);
 
 		//si l'instrument n'était pas enregistré
 		if(ancienInstrument == undefined)
